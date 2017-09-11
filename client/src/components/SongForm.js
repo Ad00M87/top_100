@@ -1,7 +1,7 @@
 import React from 'react';
 
 class SongForm extends React.Component {
-  state = { title: '', artist: '', rank: '' }
+  state = { title: '', artist: '' }
 
   handleChange = (e) => {
     let { name, value } = e.target;
@@ -20,18 +20,21 @@ class SongForm extends React.Component {
         <input
           placeholder="Add A Title"
           required
+          name="title"
           value={this.state.title}
           onChange={this.handleChange}
         />
-        {/* <input
+        <input
           placeholder="Add An Artist"
           required
+          name="artist"
           value={this.state.artist}
           onChange={this.handleChange}
         />
-        <input
+        {/* <input
           placeholder="Add A Rank"
           required
+          name="rank"
           value={this.state.rank}
           onChange={this.handleChange}
         /> */}

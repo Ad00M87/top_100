@@ -29,7 +29,7 @@ class Api::SongsController < ApplicationController
   private
 
     def song_params
-      params.require(:song).permit(:title, :artist, :rank)
+      params.require(:song).permit(:title, :artist)
     end
 
     def get_song
@@ -40,5 +40,5 @@ class Api::SongsController < ApplicationController
       errors = song.errors.full_message.join(", ")
       render json: { errors: errors }, status 418
     end
-    
+
 end
